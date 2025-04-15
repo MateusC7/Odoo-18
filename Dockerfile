@@ -7,6 +7,3 @@ ENV LC_ALL es_ES.UTF-8
 
 # Copiar módulos personalizados
 COPY ./addons_custom /mnt/extra-addons
-
-# Ajustes de permisos
-RUN chown -R odoo:odoo /mnt/extra-addons

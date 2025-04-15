@@ -8,12 +8,11 @@ services:
     volumes:
       - ./addons_custom:/mnt/extra-addons
     environment:
-      - DB_HOST=${RAILWAY_PRIVATE_DOMAIN}         
-      - DB_PORT=5432                             
-      - DB_USER=${PGUSER}                        
-      - DB_PASSWORD=${POSTGRES_PASSWORD}         
-      - DB_NAME=${PGDATABASE}                    
-      - ADDONS_PATH=/mnt/extra-addons             
+      - DB_HOST=odoo-18.railway.internal
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=hJreVPxZUVLammIPCZddeeJQRiYCXmvF
+      - DB_NAME=railway          
     depends_on:
       - db  
 

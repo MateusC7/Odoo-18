@@ -12,9 +12,4 @@ COPY ./addons_custom /mnt/extra-addons
 EXPOSE 8069
 
 # Comando de inicio con las variables de entorno
-CMD ["odoo", 
-     "-d", "${PGDATABASE}", 
-     "-r", "${PGUSER}", 
-     "-w", "${POSTGRES_PASSWORD}", 
-     "--db_host=${RAILWAY_PRIVATE_DOMAIN}", 
-     "--db_port=${PGPORT}"]
+CMD odoo -d "$PGDATABASE" -r "$PGUSER" -w "$POSTGRES_PASSWORD" --db_host="$RAILWAY_PRIVATE_DOMAIN" --db_port="$PGPORT"

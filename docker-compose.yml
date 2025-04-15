@@ -8,14 +8,14 @@ services:
     volumes:
       - ./addons_custom:/mnt/extra-addons
     environment:
-      - DB_HOST=${RAILWAY_PRIVATE_DOMAIN}         # Host de la base de datos proporcionado por Railway
-      - DB_PORT=5432                             # Puerto estándar de PostgreSQL
-      - DB_USER=${PGUSER}                        # Usuario de la base de datos
-      - DB_PASSWORD=${POSTGRES_PASSWORD}         # Contraseña de la base de datos
-      - DB_NAME=${PGDATABASE}                    # Nombre de la base de datos
-      - ADDONS_PATH=/mnt/extra-addons             # Ruta para addons personalizados
+      - DB_HOST=${RAILWAY_PRIVATE_DOMAIN}         
+      - DB_PORT=5432                             
+      - DB_USER=${PGUSER}                        
+      - DB_PASSWORD=${POSTGRES_PASSWORD}         
+      - DB_NAME=${PGDATABASE}                    
+      - ADDONS_PATH=/mnt/extra-addons             
     depends_on:
-      - db  # Esto puede ser opcional si Odoo no necesita esperar a que el servicio de base de datos esté disponible.
+      - db  
 
 volumes:
   db_data:
